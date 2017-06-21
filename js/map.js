@@ -5,7 +5,9 @@
     var locationsMap, vcards, markers, group, padding;
     var mapDIV = $('#geo-hcard-map');
     
-    if (mapDIV.length && window.geo_hcard_map_settings) {
+    if (!window.geo_hcard_map_settings) window.geo_hcard_map_settings = {geo_hcard_map_type:'osm'};
+                    
+    if (mapDIV.length) {
       switch (window.geo_hcard_map_settings.geo_hcard_map_type) {
         case 'osm': {
           if (window.L) {
@@ -84,7 +86,7 @@
             }
             
             if (window.console) console.log(locationsMap);
-          } else if (window.console) console.error('Leaflet library not loaded');
+          } else if (window.console) console.error('Leaflet library not loaded, get here: http://leafletjs.com/');
           break;
         }
       }
