@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 [geo_hcard_map] map of hCard points found in the current webpage
 
 == Description ==
-[geo_hcard_map] map of hCard points found in the current webpage.
+[geo_hcard_map] shortcode map of hCard points found in the current webpage.
 All .cb-popup sub-elements will be included in the map popup for the corresponding .vcard item.
 
 == Companion plugins ==
@@ -19,6 +19,7 @@ CMB2-field-Icon (https://github.com/anewholm/CMB2-field-Icon)
 
 == Example hCard Markup for a post ==
 * http://microformats.org/wiki/hcard and http://microformats.org/wiki/geo
+```html
   <div class="vcard">
     <h2><a class="url fn org" href="http://example.com/locations/magnet-bank/">Magnet Bank</a></h2>
     <div class="cb-popup">Balacs utca, 1000 Budapest, Hungary</div>
@@ -32,6 +33,7 @@ CMB2-field-Icon (https://github.com/anewholm/CMB2-field-Icon)
       </div>
     </div>
   </div>
+```
 
 == Installation ==
 
