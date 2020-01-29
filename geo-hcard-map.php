@@ -17,17 +17,9 @@ if ( ! defined( 'CB2_VERSION' ) ) exit ( "This version of Geo hCard Map needs Co
 
 define( 'GEO_HCARD_MAP', 'geo-hcard-map' );
 define( 'GEO_HCARD_MAP_TITLE', 'GEO hCard Map' );
-define( 'GEO_HCARD_MAP_VERSION', '1.0' );
-define( 'GEO_HCARD_MAP_MINIMUM_PHP_VERSION', '4.0' );
-define( 'GEO_HCARD_MAP_MINIMUM_WP_VERSION', '4.0' );
+define( 'GEO_HCARD_MAP_VERSION', '1.1' );
 
 /* -------------------------------------------- Infrastructure -------------------------------------------- */
-function geo_hcard_map_load_admin_scripts() {
-  wp_enqueue_script( GEO_HCARD_MAP . '-admin',        plugins_url( 'js/admin.js',  __FILE__ ),          array( 'jquery' ), GEO_HCARD_MAP_VERSION );
-  wp_enqueue_style(  GEO_HCARD_MAP . '-admin-styles', plugins_url( 'css/admin.css', __FILE__ ), array(), GEO_HCARD_MAP_VERSION );
-}
-add_action( 'admin_enqueue_scripts', 'geo_hcard_map_load_admin_scripts' );
-
 function geo_hcard_map_load_scripts() {
   // TODO: conditional inclusion
   $options = array (
